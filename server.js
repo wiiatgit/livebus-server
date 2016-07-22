@@ -121,6 +121,7 @@ io.on('connection', function(socket){
 
 var IP = process.env.OPENSHIFT_NODEJS_PORT || 3001;
 var SERVER = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+SERVER = '0.0.0.0';
 
 http.listen(IP, SERVER, function(){
   console.log('listening on ' + SERVER + ':' + IP);
